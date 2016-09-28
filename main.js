@@ -26,3 +26,9 @@ button.onclick = function() {
     console.log('there was an error');
   });
 }
+
+var button2 = document.getElementById("hideshow");
+button2.onclick = function() {
+  console.log('test');
+  jQuery('#content').toggle('show');
+}

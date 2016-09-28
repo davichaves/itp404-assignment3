@@ -8,7 +8,7 @@
 
 <form>
 <input type="text" id="formValueId" name="valueId"/>
-<input type="button" id="theButton" value="submit" />
+<input type="button" id="theButton" value="submit"/>
 </form>
 
 <script type="template/handlebars" id="subreddits-template">
@@ -22,6 +22,8 @@
       {{else}}
         <p>Not Archived</p>
       {{/if}}
+      <input type="button" id="hideshow" value="Show Description"/>
+      <p>selftext: {{data.selftext}}</p>
     </div>
   {{else}}
     <p>Nothing found.</p>
