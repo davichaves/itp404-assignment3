@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 3</title>
+</head>
+<body>
+
+<form>
+<input type="text" id="formValueId" name="valueId"/>
+<input type="button" id="theButton" value="submit" />
+</form>
+
+<script type="template/handlebars" id="subreddits-template">
+  {{#each subreddits}}
+    <div class="reddit">
+      <h2>{{data.score}}</h2>
+      <p>{{data.title}}</p>
+      <p>Comments Count: {{data.num_comments}}</p>
+      {{#if data.archived}}
+        <p>Archived</p>
+      {{else}}
+        <p>Not Archived</p>
+      {{/if}}
+    </div>
+  {{else}}
+    <p>Nothing found.</p>
+  {{/each}}
+</script>
+
+<div id="subreddits-list"></div>
+
+<script src="jquery-3.1.0.js"></script>
+<script src="handlebars-v4.0.5.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
